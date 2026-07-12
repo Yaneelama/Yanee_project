@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form Field</title>
+    </head>
+
+    <body>
+        <h1>Fill this form</h1>
+        <form action="/submit-data" method="post">
+    
+        <div>
+           <label for="name">Name:</label>
+           <input type="text" placeholder="Enter your name" id="name" required name="name"/>
+           </div>
+              <div>
+           <label for="email">Enter your email:</label>
+              <input type="email" placeholder="Enter your email" id="email" required name="email"/>
+           </div>
+<div>
+                  <label for="password">Enter your password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required name="password"/>
+   </div>
+   <div>
+    <label checkbox for="subscribe">Subscribe to newsletter</label>
+    <input type="checkbox" id="subscribe" name="subscribe"/>
+   </div>
+<button type="submit">Submit</button>
+        </form>
+    </body>
+ 
+</html>

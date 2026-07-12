@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#fffcea;
+    }
+
+    .container{
+        width:400px;
+        margin:40px auto;
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2{
+        text-align:center;
+    }
+
+    label{
+        display:block;
+        margin-top:10px;
+    }
+
+    input, select{
+        width:100%;
+        padding:8px;
+        margin-top:5px;
+        box-sizing:border-box;
+    }
+
+    .gender{
+        width:auto;
+    }
+
+    button{
+        width:100%;
+        padding:10px;
+        margin-top:15px;
+        background:#007BFF;
+        color:white;
+        border:none;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    button:hover{
+        background:#0056b3;
+    }
+
+    .error{
+        color:red;
+        font-size:14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+
+<label>Full Name</label>
+<input type="text" id="name">
+<div class="error" id="nameError"></div>
+
+<label>Email</label>
+<input type="email" id="email">
+<div class="error" id="emailError"></div>
+
+<label>Phone Number</label>
+<input type="text" id="phone">
+<div class="error" id="phoneError"></div>
+
+<label>Password</label>
+<input type="password" id="password">
+<div class="error" id="passwordError"></div>
+
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword">
+<div class="error" id="confirmPasswordError"></div>
+
+<label>Gender</label>
+<input class="gender" type="radio" name="gender" value="Male"> Male
+<input class="gender" type="radio" name="gender" value="Female"> Female
+<div class="error" id="genderError"></div>
+
+<label>Country</label>
+<select id="country">
+    <option value="">Select Country</option>
+    <option>Nepal</option>
+    <option>India</option>
+    <option>USA</option>
+    <option>Australia</option>
+</select>
+<div class="error" id="countryError"></div>
+
+<br><br>
+
+<input type="checkbox" id="terms" style="width:auto;">
+I agree to the Terms & Conditions
+<div class="error" id="termsError"></div>
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    // Clear previous errors
+    document.querySelectorAll(".error").forEach(function(el){
+        el.innerHTML="";
+    });
+
+    let valid = true;
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let country = document.getElementById("country").value;
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let terms = document.getElementById("terms").checked;
+
+    // Name
+    let namePattern = /^[A-Za-z ]+$/;
+
+    if(name==""){
+        document.getElementById("nameError").innerHTML="Name is required";
+        valid=false;
+    }
+    else if(!namePattern.test(name)){
+        document.getElementById("nameError").innerHTML="Only letters allowed";
+        valid=false;
+    }
+
+    // Email
+    let emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(email==""){
+        document.getElementById("emailError").innerHTML="Email is required";
+        valid=false;
+    }
+    else if(!emailPattern.test(email)){
+        document.getElementById("emailError").innerHTML="Invalid email";
+        valid=false;
+    }
+
+    // Phone
+    let phonePattern=/^[0-9]{10}$/;
+
+    if(phone==""){
+        document.getElementById("phoneError").innerHTML="Phone number required";
+        valid=false;
+    }
+    else if(!phonePattern.test(phone)){
+        document.getElementById("phoneError").innerHTML="Enter 10 digit phone number";
+        valid=false;
+    }
+
+    // Password
+    if(password==""){
+        document.getElementById("passwordError").innerHTML="Password required";
+        valid=false;
+    }
+    else if(password.length<8){
+        document.getElementById("passwordError").innerHTML="Minimum 8 characters";
+        valid=false;
+    }
+
+    // Confirm Password
+    if(confirmPassword==""){
+        document.getElementById("confirmPasswordError").innerHTML="Confirm your password";
+        valid=false;
+    }
+    else if(password!==confirmPassword){
+        document.getElementById("confirmPasswordError").innerHTML="Passwords do not match";
+        valid=false;
+    }
+
+    // Gender
+    if(!gender){
+        document.getElementById("genderError").innerHTML="Select gender";
+        valid=false;
+    }
+
+    // Country
+    if(country==""){
+        document.getElementById("countryError").innerHTML="Select country";
+        valid=false;
+    }
+
+    // Terms
+    if(!terms){
+        document.getElementById("termsError").innerHTML="Accept Terms & Conditions";
+        valid=false;
+    }
+
+    if(valid){
+        alert("Form submitted successfully!");
+        document.getElementById("myForm").reset();
+    }
+
+});
+</script>
+
+</body>
+</html>
