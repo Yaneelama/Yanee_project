@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Contact Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        form {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form>
+        <h2>Contact Form</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your password" minlength="6" required>
+
+        <label>Message:</label>
+        <textarea placeholder="Write your message" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
