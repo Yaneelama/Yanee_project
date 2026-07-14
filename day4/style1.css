@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.site-header {
+  height: 15vh;
+  background-color: #2c7be5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.site-footer {
+  height: 60px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #cccccc;
+}
+
+.post h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.post p {
+  color: #333333;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+
+/* --- Position: Relative + Absolute (the "Power Duo") --- */
+.card {
+  position: relative; /* card itself is just a normal block */
+  width: 260px;
+  margin: 30px auto 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.avatar-wrap {
+  position: relative; /* anchor for the status dot */
+  width: 100px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+}
+
+.status-dot {
+  position: absolute; /* removed from flow, pinned to a corner of avatar-wrap */
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: #2ecc71;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 2; /* sits above the avatar image */
+}
+
+.name {
+  margin: 16px 0 4px;
+}
+
+.role {
+  color: #666;
+  margin: 0 0 16px;
+}
+
+/* --- Overflow --- */
+.bio-box {
+  height: 80px;
+  overflow-y: scroll; /* long text scrolls inside instead of growing the card */
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #eee;
+  font-size: 0.9rem;
+  line-height: 1.4em;
+}
+
+/* --- Position: Fixed --- */
+.back-to-top {
+  position: fixed; /* stays in the same viewport spot no matter how far you scroll */
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 16px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

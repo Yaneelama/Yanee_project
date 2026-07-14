@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Simple Blog</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>My Simple Blog</h1>
+    </header>
+
+    <main class="content">
+      <article class="post">
+        <h2>Understanding CSS Position</h2>
+        <p>
+          The <b>position</b> property controls how an element is placed on
+          the page. <b>Static</b> is the default — elements just stack in
+          normal document flow. <b>Relative</b> lets you nudge an element
+          while its original space stays reserved. <b>Absolute</b> removes
+          it from the flow completely, so it can overlap other elements.
+          <b>Fixed</b> locks it to the viewport, so it stays in place even
+          while the page scrolls.
+        </p>
+        <p>
+          A common place you'll see relative and absolute working together
+          is an author card, where a small status badge is pinned to the
+          corner of a profile picture. You'll also often see a fixed
+          "Back to Top" button in the corner of the screen on long blog
+          pages like this one.
+        </p>
+      </article>
+
+      <aside class="card">
+        <div class="avatar-wrap">
+          <img
+            class="avatar"
+            src="https://placehold.co/100x100"
+            alt="avatar"
+          />
+          <span class="status-dot"></span>
+        </div>
+
+        <h3 class="name">Jane Doe</h3>
+        <p class="role">Frontend Developer</p>
+
+        <div class="bio-box">
+          <p>
+            Jane loves building clean, responsive interfaces. She has been
+            writing HTML and CSS since she started learning frontend
+            development, and is currently practicing the CSS position
+            property. This text is intentionally long so the bio box
+            overflows and you can see the scrollbar appear inside the box
+            instead of pushing the card taller.
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made for the CSS class — Positioning practice</p>
+    </footer>
+
+    <button class="back-to-top" onclick="window.scrollTo(0, 0)">
+      ↑ Top
+    </button>
+  </body>
+</html>
