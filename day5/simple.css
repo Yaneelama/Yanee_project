@@ -51,7 +51,7 @@
         }
 
         .btn{
-            display:inline-block;
+            display:inline;
             background:#0077cc;
             color:white;
             padding:12px 25px;
@@ -67,8 +67,9 @@
             display:flex;
             justify-content:center;
             gap:20px;
-            padding:40px 20px;
+            padding:40px 0px;
             flex-wrap:wrap;
+            background:rgb(197, 254, 255);
         }
 
         .card{
@@ -91,3 +92,5 @@
             padding:15px;
             margin-top:30px;
         }
+
+    

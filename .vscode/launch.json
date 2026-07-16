@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open e-commerce.html",
+            "file": "c:\\Users\\lamam\\OneDrive\\Desktop\\Frontend class\\day6-transitions\\e-commerce.html"
+        }
+    ]
+}
