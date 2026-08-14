@@ -1,0 +1,48 @@
+/* =====================================
+   DESIGN TOKENS
+===================================== */
+
+:root{
+
+    /* COLORS */
+
+    --primary:#0d6efd;
+    --primary-dark:#084298;
+    --secondary:#6c757d;
+    --success:#198754;
+    --warning:#ffc107;
+    --danger:#dc3545;
+
+    --light:#f8f9fa;
+    --white:#ffffff;
+    --dark:#212529;
+
+    --body-bg:#f5f7fa;
+
+    --card-bg:#ffffff;
+
+    --text:#343a40;
+
+    --border:#dee2e6;
+
+    --shadow:0 5px 15px rgba(0,0,0,.1);
+
+    --radius:12px;
+
+    /* FONT */
+
+    --font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    /* SPACING */
+
+    --space-xs:5px;
+    --space-sm:10px;
+    --space-md:20px;
+    --space-lg:40px;
+    --space-xl:70px;
+
+    /* TRANSITIONS */
+
+    --transition:.3s ease;
+
+}
